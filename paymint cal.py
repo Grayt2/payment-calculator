@@ -21,12 +21,7 @@ text = input("are you full-time yes or no: ")
 pay = float(input("enter pay per hour: "))
 
 if text == "yes":
-    full_time = 2080 * pay
-    if full_time > 53000 / 0.15:
-        if full_time > 53000 > 106000 / 0.205:
-            if full_time < 106000 > 165000 / 0.26:
-                if full_time > 165000 / 0.29:
-                    print ("pay per year: ", full_time)
+    print ("pay per year: ", full_time)
     sys.exit()
 
 worked = float(input("enter hours you work per day: "))
