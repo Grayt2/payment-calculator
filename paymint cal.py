@@ -1,31 +1,18 @@
-import sys
+q = input('Hourly - Yearly or Yearly - Hourly? [H/Y]: ')
+def yearly(yearly_pay, days, avetimeatwork):
+    avetimeatwork = float(input('how long do you spend at work in hours?: '))
+    yearly_pay = int(input('what is your salary? [ex: 123123]: '))
+    days = 261
+    return round((yearly_pay/days)/avetimeatwork)
 
-days = 260
+def hourly(hourly_pay, days, avetimeatwork):
+    avetimeatwork = float(input('how long do you spend at work in hours?: '))
+    hourly_pay = float(input('what is your pay? [ex: 17.5]: '))
+    days = 261
+    return round(hourly_pay*avetimeatwork*days)
 
-text = input("yearly to hourly or hourly to yearly please ruspond with 1 or 2: ")
+if q == "H":
+    print(hourly(0, 0, 0), "$")
 
-#yearly to hourly
-if "1" in text:
-    
-    pay_yearly = float(input("enter pay per year: "))
-    
-    days_off = float(input("enter days off: "))
-    
-    full_pay_yearly = pay_yearly / days_off
-    print("your hourly pay: ", full_pay_yearly)
-    sys.exit()
-
-#full-time hourly to yearly
-text = input("are you full-time yes or no: ")
-
-pay = float(input("enter pay per hour: "))
-
-if text == "yes":
-    print ("pay per year: ", full_time)
-    sys.exit()
-
-worked = float(input("enter hours you work per day: "))
-
-total_pay = worked * days * pay
-
-print ("pay per year: ", total_pay)
+if q =="Y":
+    print(yearly(0, 0, 0), "$")
