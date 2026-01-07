@@ -1,11 +1,14 @@
 qu = input('Wage to salary, or salary to wage format: [w > s/s > w]: ')
 def WagetoSalary(HourlyPay):
     return (HourlyPay * 8) * 260
+    
 def SalaryToWage(SalaryPay):
     return (SalaryPay/260)/8
+    
 if "w > s" in qu:
     HourlyPay = float(input("Enter wage: "))
     print(WagetoSalary(HourlyPay))
+    
 if "s > w" in qu:
     SalaryPay = float(input("Enter salary: "))
     print(SalaryToWage(SalaryPay))
